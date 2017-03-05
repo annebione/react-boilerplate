@@ -9,9 +9,15 @@ const home = document.getElementById('home');
 
 //install transpiler for decorator
 @connect((store) => {
-    user: store.user.user;
+    user: store.user.user,
+    userFetched: false,
+    products: store.products.products
 }) 
 export default React.createClass({
+
+  this.propTypes = {
+    user.name: React.PropTypes.string
+  };
     
     componentWillMount() {
         this.props.dispatch(fetchUser(25)) 
@@ -20,7 +26,7 @@ export default React.createClass({
 	render() {
       const user = {this.props.user};
                                  
-      if (!user) {
+      if (!user.length) {
         return <button onClick={this.props.fetchUser.bind(this)}>Load user</button>
       }                              
          
@@ -29,7 +35,7 @@ export default React.createClass({
 	  return (
         <div>
           <h1> Home </h1>
-          <h2>this.props.user</h2>
+          <h2>this.props.user.name</h2>
           <ul>{mappedUserInfo}</h2>                            
         </div>
 	  )
