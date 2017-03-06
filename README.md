@@ -7,6 +7,12 @@ Stack:
 - React-router
 - React-hot-loader
 
+Tests:
+- Karma
+- Jasmine
+- Expect
+- Enzyme
+
 Other:
 - Axios
 - Redux-logger
