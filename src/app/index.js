@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import routes from 'routes'
 import store from './store'
 
+
 render(
   <Provider store={store}/>
     <Router routes={routes} history={browserHistory}/>
